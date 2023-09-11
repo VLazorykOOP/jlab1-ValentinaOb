@@ -15,10 +15,10 @@ class Main {
             int a = in.nextInt();
 
             switch (a) {
-                case 1 -> main1(args);
-                case 2 -> main2(args);
-                case 3 -> main3(args);
-                case 4 -> main4(args);
+                case 1 : main1(args);
+                case 2 : main2(args);
+                case 3 : main3(args);
+                case 4 : main4(args);
             }
         }
     }
@@ -213,14 +213,13 @@ class Main {
 
             for (int i = 0; i < words.length; i++) {
                 boolean t= false;
-                for (int j = 0; j < ch.length - 1; j++) {
+                for (int j = 0; j < ch.length-1; j++) {
                     if (ch[j] == ch[j++]) { t= true; break; }
                  }
 
-               if(t==true)  { words[i] = words[i].replace(words[i], " ");
-                        System.out.print(words[i] + " ");
-                        }
+               if(t==true)  { words[i] = words[i].replace(words[i], " "); }
             }
+             System.out.print(words);
 
             System.out.print("\nR:");
             for (String word : words) {
