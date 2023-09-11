@@ -222,7 +222,6 @@ class Main {
 
                 if (t == true) {
                     words[i] = words[i].replace(words[i], " ");
-                    System.out.print(words[i] + " ");
                 }
             }
 
