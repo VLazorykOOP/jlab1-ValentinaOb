@@ -212,19 +212,26 @@ class Main {
             }
 
             for (int i = 0; i < words.length; i++) {
-                boolean t= false;
-                for (int j = 0; j < ch.length-1; j++) {
-                    if (ch[j] == ch[j++]) { t= true; break; }
-                 }
+                boolean t = false;
+                for (int j = 0; j < ch.length - 1; j++) {
+                    if (ch[j] == ch[j + 1]) {
+                        t = true;
+                        break;
+                    }
+                }
 
-               if(t==true)  { words[i] = words[i].replace(words[i], " "); }
+                if (t == true) {
+                    words[i] = words[i].replace(words[i], " ");
+                    System.out.print(words[i] + " ");
+                }
             }
-             System.out.print(words);
 
             System.out.print("\nR:");
             for (String word : words) {
                 System.out.print(word + " ");
             }
+
+            System.out.print("\n");
 
         }
     }
