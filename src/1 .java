@@ -15,10 +15,10 @@ class Main {
             int a = in.nextInt();
 
             switch (a) {
-                case 1 : main1(args);
-                case 2 : main2(args);
-                case 3 : main3(args);
-                case 4 : main4(args);
+                case 1 -> main1(args);
+                case 2 -> main2(args);
+                case 3 -> main3(args);
+                case 4 -> main4(args);
             }
         }
     }
@@ -211,26 +211,36 @@ class Main {
                 System.out.print(character + " ");
             }
 
+            String a = null;
+            String r = " ";
+            boolean t;
+            int k = 0;
             for (int i = 0; i < words.length; i++) {
-                boolean t = false;
-                for (int j = 0; j < ch.length - 1; j++) {
-                    if (ch[j] == ch[j + 1]) {
+                t = false;
+                r += words[i];
+                System.out.print("W: " + r + " ");
+                for (int j = k; j < ch.length; j++) {
+                    if (ch[j] == ch[j++]) {
+                        k = j + 1;
+                        System.out.print("\n" + "K: " + k);
+                        System.out.print("\n" + "C: " + ch[j] + " " + ch[j++]);
                         t = true;
+                        a = words[i];
+                        System.out.println("\nA: ");
+                        System.out.print(a + " ");
                         break;
                     }
                 }
 
                 if (t == true) {
-                    words[i] = words[i].replace(words[i], " ");
+                    r = r.replace(a, "2");
+                    System.out.println("\nR: ");
+                    System.out.print(r + " ");
                 }
             }
 
             System.out.print("\nR:");
-            for (String word : words) {
-                System.out.print(word + " ");
-            }
-
-            System.out.print("\n");
+            System.out.print(r);
 
         }
     }
