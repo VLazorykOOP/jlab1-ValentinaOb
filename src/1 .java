@@ -15,10 +15,10 @@ class Main {
             int a = in.nextInt();
 
             switch (a) {
-                case 1 -> main1(args);
-                case 2 -> main2(args);
-                case 3 -> main3(args);
-                case 4 -> main4(args);
+                case 1 : main1(args);
+                case 2 : main2(args);
+                case 3 : main3(args);
+                case 4 : main4(args);
             }
         }
     }
