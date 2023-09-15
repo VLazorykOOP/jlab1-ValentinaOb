@@ -10,7 +10,7 @@ class Main {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.print("Ex: ");
+        System.out.println("Ex: ");
 
         try (Scanner in = new Scanner(System.in)) {
             int a = in.nextInt();
