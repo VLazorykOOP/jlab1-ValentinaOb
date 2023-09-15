@@ -10,6 +10,7 @@ class Main {
      * @param args
      */
     public static void main(String[] args) {
+        System.out.print("Ex: ");
 
         try (Scanner in = new Scanner(System.in)) {
             int a = in.nextInt();
@@ -24,13 +25,18 @@ class Main {
     }
 
     public static void main1(String[] args) {
+        
         float a = (float) 5.55, b = (float) 1.78, c, c1;
         int c2;
         try (Scanner in = new Scanner(System.in)) {
+            System.out.print("A1: ");
             int a1 = in.nextInt();
+            System.out.print("\nB1: ");
             int b1 = in.nextInt();
 
+            System.out.print("\nA2: ");
             float a2 = in.nextFloat();
+            System.out.print("\nB2: ");
             float b2 = in.nextFloat();
 
             // a=1 b=6 - c=1.24...
@@ -39,7 +45,7 @@ class Main {
             c2 = (int) ((1 / (a2 * b2 * b2 - 2 * b2)) + ((1 / (3 * a2 * a2 + 2)) * b2));
         }
 
-        System.out.println("\n1. " + c + "\n" + "2. " + c1 + "\n" + "3. " + c2 + "\n");
+        System.out.println("\nResult: \n1. " + c + "\n" + "2. " + c1 + "\n" + "3. " + c2 + "\n");
 
     }
 
@@ -55,30 +61,21 @@ class Main {
             int[] D = new int[c];
             int[] E = new int[c];
 
+            System.out.print("\nN: ");
             int n1 = in.nextInt();
+            System.out.print("\nM: ");
             int m1 = in.nextInt();
             int c1 = n1 + m1;
 
+            System.out.print("\nA: ");
             for (int i = 0; i < n1; i++) {
                 A[i] = in.nextInt();
             }
 
-            System.out.println("\n");
-
-            System.out.println("A: ");
-            for (int i = 0; i < n1; i++) {
-                System.out.print(A[i] + " ");
-            }
-
-            System.out.println("\n");
+            System.out.print("\nB: ");
 
             for (int i = 0; i < m1; i++) {
                 B[i] = in.nextInt();
-            }
-
-            System.out.println("B: ");
-            for (int i = 0; i < m1; i++) {
-                System.out.print(B[i] + " ");
             }
 
             System.out.println("\n");
@@ -93,7 +90,7 @@ class Main {
                 }
             }
 
-            System.out.println("\nE: ");
+            System.out.print("\nSame el.: ");
             for (int i = 0; i < k; i++) {
                 System.out.print(E[i] + " ");
             }
@@ -108,18 +105,13 @@ class Main {
                     }
                 }
 
-            System.out.println("\nA: ");
-            for (int i = 0; i < n1; i++) {
-                System.out.print(A[i] + " ");
-            }
-
             for (int i = 0; i < n1; i++) {
                 if (A[i] != -1) {
                     C[l++] = A[i];
                 }
             }
 
-            System.out.println("\nC: ");
+            System.out.print("\nA El: ");
             for (int i = 0; i < l; i++) {
                 System.out.print(C[i] + " ");
             }
@@ -138,10 +130,11 @@ class Main {
                 }
             }
 
-            System.out.println("\nC: ");
+            System.out.print("\n\nResult: ");
             for (int i = 0; i < l; i++) {
                 System.out.print(C[i] + " ");
             }
+            System.out.print("\n\n");
 
         }
 
@@ -155,17 +148,15 @@ class Main {
 
         try (Scanner in = new Scanner(System.in)) {
             Random rd = new Random();
+
+            System.out.println("N: ");
             int n = in.nextInt();
+
+            System.out.println("A: ");
 
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++) {
                     A[i][j] = in.nextInt();
-                }
-
-            System.out.println("\nA: ");
-            for (int i = 0; i < n; i++)
-                for (int j = 0; j < n; j++) {
-                    System.out.print(A[i][j] + " ");
                 }
 
             int k = 0;
@@ -185,17 +176,19 @@ class Main {
                     }
                 }
 
-            System.out.println("\nB: ");
+            System.out.println("\nResult: ");
             for (int i = 0; i < k; i++) {
                 System.out.print(B[i] + " ");
             }
+            System.out.print("\n\n\n");
         }
     }
 
+
     public static void main4(String[] args) {
-        System.out.println("Введіть текст:");
 
         try (Scanner in = new Scanner(System.in)) {
+            System.out.println("Text:");
             String text = in.nextLine();
             String[] words = text.split("[ ,.:;-?!]+");
 
@@ -227,7 +220,7 @@ class Main {
                 }
             }
 
-            System.out.print("\n\nR:");
+            System.out.print("\n\nResult:");
             System.out.println(r);
 
         }
