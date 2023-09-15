@@ -204,43 +204,31 @@ class Main {
                 System.out.print(word + " ");
             }
 
-            String[] ch = text.split("");
-
-            System.out.print("\nCh: ");
-            for (String character : ch) {
-                System.out.print(character + " ");
-            }
-
             String a = null;
             String r = " ";
             boolean t;
             int k = 0;
+
             for (int i = 0; i < words.length; i++) {
                 t = false;
-                r += words[i];
-                System.out.print("W: " + r + " ");
-                for (int j = k; j < ch.length; j++) {
-                    if (ch[j] == ch[j++]) {
-                        k = j + 1;
-                        System.out.print("\n" + "K: " + k);
-                        System.out.print("\n" + "C: " + ch[j] + " " + ch[j++]);
+                r += words[i] +" ";
+                String ch=words[i];
+                for (int j = 0; j < ch.length()-1; j++) {
+                    if (ch.charAt(j) == ch.charAt(j+1)) {
+                        System.out.print("\n" + "C: " + ch.charAt(j) + " " + ch.charAt(j+1));
                         t = true;
                         a = words[i];
-                        System.out.println("\nA: ");
-                        System.out.print(a + " ");
                         break;
                     }
                 }
 
                 if (t == true) {
-                    r = r.replace(a, "2");
-                    System.out.println("\nR: ");
-                    System.out.print(r + " ");
+                    r = r.replace(a, "");
                 }
             }
 
-            System.out.print("\nR:");
-            System.out.print(r);
+            System.out.print("\n\nR:");
+            System.out.println(r);
 
         }
     }
